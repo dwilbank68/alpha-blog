@@ -1,10 +1,34 @@
 source 'https://rubygems.org'
 
+group :production do
+  gem 'pg'
+  gem 'rails_12factor'
+end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.5'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+
+group :development do
+  gem 'sqlite3'
+  gem 'quiet_assets'
+  gem "better_errors"
+  gem "binding_of_caller" #if you use better_errors
+  gem 'sprockets_better_errors'
+  gem 'hirb'
+  gem 'awesome_print'
+end
+
+group :test do
+  gem 'database_cleaner'
+  gem 'factory_girl_rails', '~> 4.0'
+end
+
+group :development, :test do
+  gem 'rspec-rails'
+  gem 'capybara'
+end
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
@@ -38,3 +62,20 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+gem 'bootstrap-sass'#, '~> 3.1.1'
+#gem 'faker'
+#gem 'devise'
+#gem 'figaro'
+#gem 'tzinfo-data', platforms: [:mingw, :mswin]
+#gem 'pundit'
+#gem 'redcarpet' # to parse Markdown syntax
+#gem 'carrierwave'
+#gem 'mini_magick'
+#gem 'fog'
+#gem 'will_paginate', '~> 3.0.5'
+
+#gem 'haml-rails'
+#gem 'newrelic_rpm'
+#gem 'omniauth-facebook'
+#gem 'embedly'
+#gem 'querystring' # if you use embedly
