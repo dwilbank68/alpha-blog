@@ -1,7 +1,15 @@
 Rails.application.routes.draw do
 
+  get 'users/new'
+
+  get 'users/create'
+
+  get 'users/edit'
+
   get 'pages/about' => 'pages#about'
 
+  get 'signup', to: 'users#new'
+  resources :users, except: [:new]
   # get 'articles/index'
   #
   # get 'articles/create'

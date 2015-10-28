@@ -76,6 +76,7 @@ gem 'spring',        group: :development
 #gem 'carrierwave'
 #gem 'mini_magick'
 #gem 'fog'
+gem 'bcrypt', '~> 3.1.7'
 #gem 'will_paginate', '~> 3.0.5'
 gem 'coffee-script-source', '1.8.0'
 #gem 'haml-rails'
