@@ -17,6 +17,10 @@ group :development do
   #gem 'sprockets_better_errors'
   gem 'hirb'
   gem 'awesome_print'
+
+  gem 'byebug'
+  gem 'web-console'
+
 end
 
 group :test do
