@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :categories, only: [:index, :new, :show, :create]
+
   get 'users/new'
 
   get 'users/create'
